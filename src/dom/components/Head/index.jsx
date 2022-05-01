@@ -9,7 +9,7 @@ const DESCRIPTION = `${NAME}, I'm a French Frontend Engineer, passionate about e
  * Head - metatags for the site
  */
 const Head = () => {
-  const MEASUREMENT_ID = import.meta.env.VITE_MEASUREMENT_ID
+  const MEASUREMENT_ID = `${import.meta.env.VITE_MEASUREMENT_ID}`
   console.log({ MEASUREMENT_ID })
   return (
     <Helmet>
