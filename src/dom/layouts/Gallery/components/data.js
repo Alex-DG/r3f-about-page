@@ -65,8 +65,8 @@ export const data = [
   },
   {
     title: 'About',
-    live: 'https://github.com/Alex-DG/',
-    github: 'https://github.com/Alex-DG/',
+    live: 'https://r3f-about-page.vercel.app/',
+    github: 'https://github.com/Alex-DG/r3f-about-page',
   },
   {
     title: 'Surface Sampler',
