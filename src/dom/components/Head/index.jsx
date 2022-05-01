@@ -12,7 +12,6 @@ const Head = () => {
   const MEASUREMENT_URL = `${import.meta.env.VITE_MEASUREMENT_URL}`
   const MEASUREMENT_ID = `${import.meta.env.VITE_MEASUREMENT_ID}`
 
-  console.log({ MEASUREMENT_URL, MEASUREMENT_ID })
   return (
     <Helmet>
       {/* Recommended Meta Tags */}
@@ -90,8 +89,7 @@ const Head = () => {
             dataLayer.push(arguments);
           }
           gtag('js', new Date());
-          const MEASUREMENT_ID = '${MEASUREMENT_ID}';
-          gtag('config', MEASUREMENT_ID);
+          gtag('config', '${MEASUREMENT_ID}');
         `}
       </script>
     </Helmet>
