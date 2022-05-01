@@ -3,12 +3,17 @@ import Helmet from 'react-helmet'
 const NAME = 'Alex Di Guida'
 const TITLE = `${NAME} ~ Frontend Engineer`
 const URL = 'https://alexdiguida.com/'
-const DESCRIPTION = `${NAME}, I'm a French Frontend Engineer, passionate about everything web, with a keen interest in 3D and AR development. What I like? Exploring new technologies, learning and experimenting what I learnt.`
+const DESCRIPTION = `${NAME}, I'm a French Frontend Engineer, passionate about everything web & mobile app development, with a keen interest in 3D and AR development. What I like? Exploring new technologies, learning and experimenting what I learnt.`
 
 /**
  * Head - metatags for the site
  */
 const Head = () => {
+  const isDev = import.meta.env.DEV
+  const trackerID = `${import.meta.env.REACT_APP_TRACKER_ID}`
+  const trackerURL = `${import.meta.env.REACT_APP_TRACKER_URL}`
+
+  console.log({ isDev, trackerID, trackerURL })
   return (
     <Helmet>
       {/* Recommended Meta Tags */}
@@ -76,6 +81,29 @@ const Head = () => {
         Be sure validate your Twitter card markup on the documentation site. */}
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:creator' content='@Alex_dg_dev' />
+
+      {/* Google Analytics */}
+      {!isDev && (
+        <>
+          <script async src={trackerURL}></script>
+
+          <script>
+            {`
+          window.dataLayer = window.dataLayer || [];
+
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+
+          gtag('js', new Date());
+     
+          const id = ${trackerID};
+
+          gtag('config', id);
+        `}
+          </script>
+        </>
+      )}
     </Helmet>
   )
 }
