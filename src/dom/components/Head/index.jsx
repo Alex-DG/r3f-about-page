@@ -10,7 +10,7 @@ const DESCRIPTION = `${NAME}, I'm a French Frontend Engineer, passionate about e
  */
 const Head = () => {
   const MEASUREMENT_ID = `${import.meta.env.VITE_MEASUREMENT_ID}`
-  console.log({ MEASUREMENT_ID })
+
   return (
     <Helmet>
       {/* Recommended Meta Tags */}
@@ -83,16 +83,16 @@ const Head = () => {
       <>
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id="${MEASUREMENT_ID}"`}
         ></script>
 
         <script>
           {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', ${MEASUREMENT_ID});
-            `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', "${MEASUREMENT_ID}");
+          `}
         </script>
       </>
     </Helmet>

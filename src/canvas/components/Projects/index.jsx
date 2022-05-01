@@ -66,7 +66,6 @@ const Projects = () => {
         }
 
         if (groups.length >= 1) {
-          console.log({ groups })
           const image = groups[i].children[0]
           if (image) {
             const aspect = image.userData.aspect
