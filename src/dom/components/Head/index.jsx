@@ -3,7 +3,8 @@ import Helmet from 'react-helmet'
 const NAME = 'Alex Di Guida'
 const TITLE = `${NAME} ~ Frontend Engineer`
 const URL = 'https://alexdiguida.com/'
-const DESCRIPTION = `${NAME}, I'm a French Frontend Engineer, passionate about everything web & mobile app development, with a keen interest in 3D and AR development. What I like? Exploring new technologies, learning and experimenting what I learnt.`
+const DESCRIPTION = `${NAME}, I'm a French Frontend Engineer, passionate about everything web & mobile app development, with a keen interest in 3D and AR development. What do I like? Exploring new technologies, learning and experimenting what I learnt in order to build innovative
+and interactive web-oriented experiences.`
 
 /**
  * Head - metatags for the site

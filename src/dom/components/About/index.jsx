@@ -71,17 +71,17 @@ const About = ({ view }) => {
 
         <div className='about-container'>
           <p>
-            Frontend developer, I worked in France, England, and Scotland for
-            the past 7+ years.
+            Frontend Engineer, with and interest in real-time graphics. I worked
+            in France, England, and Scotland for the past 8+ years.
           </p>
           <p>
             Passionate about everything web, with a keen interest in 3D and AR
             development! I like to build innovative solutions, improving user
-            engagement by making entertaining and interesting web experiences.
+            engagement by making interactive and interesting web experiences.
           </p>
           <p>
-            What I like? Exploring new technologies, learning and experimenting
-            what I learnt.
+            What do I like? Exploring new technologies, learning and
+            experimenting what I learnt.
           </p>
         </div>
       </Section>

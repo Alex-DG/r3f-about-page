@@ -114,7 +114,7 @@ const Project = ({
   return (
     <>
       <div className='menu-item'>
-        {callback ? (
+        {!url ? (
           <span
             id='gallery-menu'
             className='menu-item-link'
