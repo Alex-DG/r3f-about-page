@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": false,
+        "fileName": false,
+        "displayName": false,
+        "meaninglessFileNames": ["index", "styles"],
+        "pure": true
+      }
+    ]
+  ]
+}
