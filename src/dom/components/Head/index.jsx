@@ -9,11 +9,8 @@ const DESCRIPTION = `${NAME}, I'm a French Frontend Engineer, passionate about e
  * Head - metatags for the site
  */
 const Head = () => {
-  const isDev = import.meta.env.DEV
-  const trackerID = `${import.meta.env.REACT_APP_TRACKER_ID}`
-  const trackerURL = `${import.meta.env.REACT_APP_TRACKER_URL}`
-
-  console.log({ isDev, trackerID, trackerURL })
+  const MEASUREMENT_ID = `${import.meta.env.VITE_MEASUREMENT_ID}`
+  console.log({ MEASUREMENT_ID })
   return (
     <Helmet>
       {/* Recommended Meta Tags */}
@@ -83,27 +80,21 @@ const Head = () => {
       <meta name='twitter:creator' content='@Alex_dg_dev' />
 
       {/* Google Analytics */}
-      {!isDev && (
-        <>
-          <script async src={trackerURL}></script>
+      <>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`}
+        ></script>
 
-          <script>
-            {`
-          window.dataLayer = window.dataLayer || [];
-
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-
-          gtag('js', new Date());
-     
-          const id = ${trackerID};
-
-          gtag('config', id);
-        `}
-          </script>
-        </>
-      )}
+        <script>
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', ${MEASUREMENT_ID});
+            `}
+        </script>
+      </>
     </Helmet>
   )
 }
