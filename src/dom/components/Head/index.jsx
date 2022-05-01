@@ -9,8 +9,9 @@ const DESCRIPTION = `${NAME}, I'm a French Frontend Engineer, passionate about e
  * Head - metatags for the site
  */
 const Head = () => {
+  const MEASUREMENT_URL = `${import.meta.env.VITE_MEASUREMENT_URL}`
   const MEASUREMENT_ID = `${import.meta.env.VITE_MEASUREMENT_ID}`
-  console.log({ MEASUREMENT_ID })
+
   return (
     <Helmet>
       {/* Recommended Meta Tags */}
@@ -80,18 +81,17 @@ const Head = () => {
       <meta name='twitter:creator' content='@Alex_dg_dev' />
 
       {/*  Global site tag (gtag.js) - Google Analytics  */}
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${MEASUREMENT_ID}`}
-      ></script>
-
+      <script async src={MEASUREMENT_URL}></script>
       <script>
         {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', ${MEASUREMENT_ID});
-          `}
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          const id = ${MEASUREMENT_ID};
+          gtag('config', id);
+        `}
       </script>
     </Helmet>
   )
