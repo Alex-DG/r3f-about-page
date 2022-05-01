@@ -12,7 +12,7 @@ const Layout = styled.div`
   width: 100%;
   height: 100%;
   z-index: 2;
-  .container {
+  .home-container {
     width: 96%;
     margin: 0px auto;
   }
@@ -24,7 +24,7 @@ const Home = ({ views }) => {
 
   return (
     <Layout className='home-layout'>
-      <div ref={containerRef} className='container'>
+      <div ref={containerRef} className='home-container'>
         <Navbar />
         <Header />
         <Hero view={view1} />
