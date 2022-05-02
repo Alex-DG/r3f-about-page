@@ -11,14 +11,19 @@ const Face = () => {
   const model = useStore((state) => state.models.face)
   if (!model) return null
 
+  const appReady = useStore((state) => state.appReady)
+
   const modelRef = useRef()
+  const basicMatRef = useRef()
 
   model.scene.position.z = -0.31
   model.scene.position.y = -0.23
 
+  let materials = []
   model.scene.traverse((child) => {
     if (child instanceof Mesh) {
       child.material = XRayMaterial
+      materials.push(child.material)
     }
   })
 
@@ -28,6 +33,24 @@ const Face = () => {
 
     modelRef.current.rotation.y = Math.sin(clock.getElapsedTime()) * 0.11
   })
+
+  useEffect(() => {
+    if (appReady) {
+      const opacities = materials.map((mat) => mat.uniforms.uOpacity)
+      gsap.to(opacities, {
+        value: 1,
+        delay: 1.5,
+        duration: 2,
+        ease: 'power3.out',
+      })
+      gsap.to(basicMatRef.current, {
+        opacity: 0.25,
+        delay: 1.5,
+        duration: 2,
+        ease: 'power3.out',
+      })
+    }
+  }, [appReady])
 
   useEffect(() => {
     gsap.fromTo(
@@ -56,10 +79,11 @@ const Face = () => {
         rotation={[-0.1, 0.2, 0]}
       >
         <meshBasicMaterial
+          ref={basicMatRef}
           attach='material'
           color='black'
           transparent
-          opacity={0.25}
+          opacity={0}
         />
       </Plane>
       <primitive
