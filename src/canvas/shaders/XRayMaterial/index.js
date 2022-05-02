@@ -7,7 +7,7 @@ const XRayMaterial = new ShaderMaterial({
   wireframe: true,
   uniforms: {
     uPower: { value: 3 },
-    uOpacity: { value: 1.0 },
+    uOpacity: { value: 0.0 },
     uGlowColor: { value: new Color(0x84ccff) },
   },
   vertexShader: vertex,

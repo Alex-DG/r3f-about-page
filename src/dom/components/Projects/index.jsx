@@ -166,11 +166,9 @@ const Projects = () => {
       {
         opacity: 0,
         scale: 0,
-        y: '+=10%',
       },
       {
         opacity: 1,
-        y: '-=20%',
         scale: 1,
         duration: 1,
         ease: 'power3.out',
