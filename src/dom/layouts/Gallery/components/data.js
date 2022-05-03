@@ -56,7 +56,8 @@ export const data = [
   },
   {
     title: 'AR Face Filters',
-    article: 'https://www.zappar.com/blog/month-ar-october-2021/',
+    article:
+      'https://www.zappar.com/campaigns/unilever-ahc-discover-power-pro-retinal-11x/',
   },
   {
     title: 'Megan',
