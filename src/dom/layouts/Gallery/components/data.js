@@ -1,7 +1,7 @@
 export const data = [
   {
     title: 'Alternative',
-    live: 'https://www.alexdiguida.com/',
+    live: 'https://react-three-portfolio.vercel.app/',
     github: '',
   },
   {
