@@ -76,8 +76,9 @@ const About = ({ view }) => {
           </p>
           <p>
             Passionate about everything web, with a keen interest in 3D and AR
-            development! I like to build innovative solutions, improving user
-            engagement by making interactive and interesting web experiences.
+            development! I'm working to build innovative solutions, improving
+            user engagement by making interactive and interesting web
+            experiences.
           </p>
           <p>
             What do I like? Exploring new technologies, learning and
