@@ -74,4 +74,9 @@ export const data = [
     live: 'https://threejs-glb-particles-animation.netlify.app/',
     github: 'https://github.com/Alex-DG/threejs-glb-particles-animation',
   },
+  {
+    title: 'Sakura Light',
+    live: 'https://sakura-light-ray.vercel.app/?debug',
+    github: 'https://github.com/Alex-DG/r3f-sakura-light-ray',
+  },
 ]

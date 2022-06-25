@@ -14,6 +14,7 @@ import img12Src from '../../assets/images/img12.png'
 import img13Src from '../../assets/images/img13.png'
 import img14Src from '../../assets/images/img14.png'
 import img15Src from '../../assets/images/img15.png'
+import img16Src from '../../assets/images/img16.png'
 
 // 3d Models
 import modelBodySrc from '../../assets/models/body/alex_idle_pose.fbx'
@@ -36,6 +37,7 @@ export const imgSources = [
   img13Src,
   img14Src,
   img15Src,
+  img16Src,
 ]
 export const bodySrc = modelBodySrc
 export const faceSrc = modelfaceSrc

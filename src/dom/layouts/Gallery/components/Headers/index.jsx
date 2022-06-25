@@ -80,6 +80,9 @@ const Wrapper = styled.div`
   .n14 {
     top: 1500px;
   }
+  .n15 {
+    top: 1600px;
+  }
 `
 
 const Headers = () => {

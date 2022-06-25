@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react'
 
 const useGallery = ({ images, galleryActive }) => {
   const [isReady, setReady] = useState(false)
-
+  console.log({ images })
   const groupsRef = useRef([])
   const wrapRef = useRef(null)
   const elemsRef = useRef(null)
@@ -68,6 +68,10 @@ const useGallery = ({ images, galleryActive }) => {
     {
       name: 'Project 14',
       texture: images[14],
+    },
+    {
+      name: 'Project 15',
+      texture: images[15],
     },
   ])
 
